@@ -38,3 +38,32 @@ header
     display: flex;
     align-items: center;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: floralwhite;
+      
+}
+
+.padleftright{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.padtop{
+    padding-top: 25px;
+}
+    
+.footer{
+    padding-top: 380px;
+    align-content: center;
+    color: floralwhite;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 120%;
