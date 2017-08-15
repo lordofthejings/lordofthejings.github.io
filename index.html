@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>A Pen by Daniel David</title>
+    <title>Please Standby.</title>
 
 
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
     <link rel="stylesheet" href="css/comingsoonstyle.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans" rel="stylesheet">
 
 
 </head>
@@ -18,14 +20,55 @@
         <div class="row">
             <div class="greenbg col-md-6 no-float">
                 <div class="verticalcenter2">
-                    Sign up today!
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Totally valid Email Address...">
-                        <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-                    </div>
-                    <!-- /input-group -->
+                    <div class="padleftright">
+                        <h2>Get ready.</h2>
+                        <h2>Everything you've ever wanted will be here very soon.</h2>
+                        <div class="padtop">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email address">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </div><!-- /padtop -->
+                        
+                        <!-- Display the countdown timer in an element -->
+                        <h1 id="demo" class="padtop"></h1>
+                            <script>
+                            // Set the date we're counting down to
+                            var countDownDate = new Date("Aug 18, 2017 18:30:00").getTime();
+
+                            // Update the count down every 1 second
+                            var x = setInterval(function() {
+
+                              // Get todays date and time
+                              var now = new Date().getTime();
+
+                              // Find the distance between now an the count down date
+                              var distance = countDownDate - now;
+
+                              // Time calculations for days, hours, minutes and seconds
+                              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                              // Display the result in the element with id="demo"
+                              document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                              + minutes + "m " + seconds + "s ";
+
+                              // If the count down is finished, write some text 
+                              if (distance < 0) {
+                                clearInterval(x);
+                                document.getElementById("demo").innerHTML = "EXPIRED";
+                              }
+                            }, 1000);
+                            </script>
+                        
+                        <div class="footer">
+                        © 2017 - Made with <span class="glyphicon glyphicon-heart"></span> by JR. and SR.
+                        </div>
+                    </div><!-- /padleftright -->
                 </div>
             </div>
             <div class="blackbg col-md-6 no-float">
